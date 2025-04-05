@@ -13,6 +13,7 @@ import CustomTasksPage from "@/pages/CustomTasksPage";
 import StatsPage from "@/pages/StatsPage";
 import ResourcesPage from "@/pages/ResourcesPage";
 import SchedulePage from "@/pages/SchedulePage";
+import AndroidDownloadPage from "@/pages/AndroidDownloadPage";
 
 // Simple router that separates the landing page from the app layout pages
 function Router() {
@@ -67,6 +68,12 @@ function Router() {
       <Route path="/schedule">
         <AppLayout>
           <SchedulePage />
+        </AppLayout>
+      </Route>
+      
+      <Route path="/download-android">
+        <AppLayout>
+          <AndroidDownloadPage />
         </AppLayout>
       </Route>
       

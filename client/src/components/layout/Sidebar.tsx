@@ -22,6 +22,12 @@ interface SidebarProps {
   className?: string;
 }
 
+interface NavLink {
+  title: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
 export default function Sidebar({ className }: SidebarProps) {
   const [location] = useLocation();
   console.log("Current location:", location);
@@ -34,7 +40,7 @@ export default function Sidebar({ className }: SidebarProps) {
     setIsMobileOpen(false);
   }, [location]);
 
-  const links = [
+  const links: NavLink[] = [
     {
       title: 'Dashboard',
       href: '/dashboard',
@@ -79,8 +85,6 @@ export default function Sidebar({ className }: SidebarProps) {
       title: 'Android App',
       href: '/download-android',
       icon: Smartphone,
-      external: true,
-      externalUrl: '/download-apk.html',
     },
   ];
 
@@ -121,40 +125,22 @@ export default function Sidebar({ className }: SidebarProps) {
       <div className="px-3 py-2">
         <div className="space-y-1">
           {links.map((link) => (
-            link.external ? (
-              <a key={link.href} href={link.externalUrl} target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="ghost"
-                  className={cn(
-                    "w-full justify-start",
-                    isCollapsed ? "px-2" : "px-3"
-                  )}
-                  size={isCollapsed ? "icon" : "default"}
-                >
-                  <link.icon className={cn("h-5 w-5", isCollapsed ? "" : "mr-2")} />
-                  {!isCollapsed && (
-                    <span className="flex items-center">
-                      {link.title}
-                      <Download className="ml-1 h-3 w-3" />
-                    </span>
-                  )}
-                </Button>
-              </a>
-            ) : (
-              <Link key={link.href} href={link.href}>
-                <Button
-                  variant={location === link.href ? "secondary" : "ghost"}
-                  className={cn(
-                    "w-full justify-start",
-                    isCollapsed ? "px-2" : "px-3"
-                  )}
-                  size={isCollapsed ? "icon" : "default"}
-                >
-                  <link.icon className={cn("h-5 w-5", isCollapsed ? "" : "mr-2")} />
-                  {!isCollapsed && <span>{link.title}</span>}
-                </Button>
-              </Link>
-            )
+            <Link key={link.href} href={link.href}>
+              <Button
+                variant={location === link.href ? "secondary" : "ghost"}
+                className={cn(
+                  "w-full justify-start",
+                  isCollapsed ? "px-2" : "px-3"
+                )}
+                size={isCollapsed ? "icon" : "default"}
+              >
+                <link.icon className={cn("h-5 w-5", isCollapsed ? "" : "mr-2")} />
+                {!isCollapsed && <span>{link.title}</span>}
+                {!isCollapsed && link.href === '/download-android' && (
+                  <Download className="ml-1 h-3 w-3" />
+                )}
+              </Button>
+            </Link>
           ))}
         </div>
       </div>
