@@ -22,7 +22,7 @@ export default function TaskItem({ taskKey, task, isChecked, onToggle }: TaskIte
         <div className="ml-3">
           <label 
             htmlFor={taskKey}
-            className="text-sm font-medium text-gray-900 cursor-pointer"
+            className="text-sm font-medium text-foreground cursor-pointer"
           >
             {task}
           </label>
