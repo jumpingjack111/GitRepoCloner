@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import ProgressSummary from '@/components/tracker/ProgressSummary';
 import PhaseCard from '@/components/tracker/PhaseCard';
+import BrightnessController from '@/components/theme/BrightnessController';
 import { trackerData } from '@/lib/trackerData';
 
 export default function ISITracker() {
@@ -111,6 +112,7 @@ export default function ISITracker() {
           </div>
           
           <div className="flex items-center space-x-4">
+            <BrightnessController />
             <Button 
               variant="outline" 
               onClick={handleReset}
