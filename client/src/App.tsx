@@ -12,6 +12,7 @@ import PomodoroTimerPage from "@/pages/PomodoroTimerPage";
 import CustomTasksPage from "@/pages/CustomTasksPage";
 import StatsPage from "@/pages/StatsPage";
 import ResourcesPage from "@/pages/ResourcesPage";
+import SchedulePage from "@/pages/SchedulePage";
 
 // Simple router that separates the landing page from the app layout pages
 function Router() {
@@ -60,6 +61,12 @@ function Router() {
       <Route path="/resources">
         <AppLayout>
           <ResourcesPage />
+        </AppLayout>
+      </Route>
+      
+      <Route path="/schedule">
+        <AppLayout>
+          <SchedulePage />
         </AppLayout>
       </Route>
       

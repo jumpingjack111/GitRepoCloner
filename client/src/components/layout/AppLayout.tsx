@@ -16,8 +16,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
       
       <div className="flex-1 flex flex-col overflow-hidden">
         <header className="bg-card shadow z-10">
-          <div className="px-4 h-16 flex items-center justify-between">
-            <h1 className="text-xl font-bold">ISI MSQE Study Tracker</h1>
+          <div className="px-4 h-16 flex items-center justify-end">
             <div className="flex items-center">
               <BrightnessController />
             </div>

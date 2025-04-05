@@ -1,5 +1,7 @@
 export const trackerData = [
   { 
+    id: "phase1",
+    title: "Phase 1: Foundation Building",
     phase: "Phase 1: Foundation Building (Apr - Dec 2025)", 
     tasks: [ 
       "Finish high-school math (functions, limits, continuity)", 
@@ -11,6 +13,8 @@ export const trackerData = [
     ] 
   },
   { 
+    id: "phase2",
+    title: "Phase 2: Core Prep",
     phase: "Phase 2: Core Prep (Jan - Oct 2026)", 
     tasks: [ 
       "Finish multivariate calculus (Khan Academy/MIT OCW)", 
@@ -24,6 +28,8 @@ export const trackerData = [
     ] 
   },
   { 
+    id: "phase3",
+    title: "Phase 3: Advanced Prep",
     phase: "Phase 3: Advanced Prep (Nov 2026 - Jun 2027)", 
     tasks: [ 
       "Complete real analysis if needed (Rudin Chapter 1-5)", 
@@ -36,6 +42,8 @@ export const trackerData = [
     ] 
   },
   { 
+    id: "phase4",
+    title: "Phase 4: Final Preparation",
     phase: "Phase 4: Final Preparation (Jul 2027 - Feb 2028)", 
     tasks: [ 
       "Review all math (calculus, linear algebra, real analysis)", 

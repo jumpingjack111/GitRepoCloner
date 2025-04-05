@@ -8,6 +8,7 @@ import {
   Settings, 
   Home,
   ChevronLeft,
+  Calendar,
   Menu
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -46,6 +47,11 @@ export default function Sidebar({ className }: SidebarProps) {
       title: 'Custom Tasks',
       href: '/custom-tasks',
       icon: CheckSquare,
+    },
+    {
+      title: 'Schedule',
+      href: '/schedule',
+      icon: Calendar,
     },
     {
       title: 'Study Timer',
