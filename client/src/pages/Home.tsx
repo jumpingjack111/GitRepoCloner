@@ -116,8 +116,10 @@ export default function Home() {
                         </a>
                       </Button>
                     ) : (
-                      <Button className="w-full sm:w-auto" size="lg" variant="outline">
-                        <Smartphone className="mr-2 h-4 w-4" /> Available for Android
+                      <Button className="w-full sm:w-auto" size="lg" variant="outline" asChild>
+                        <a href="/download-apk.html" target="_blank" rel="noopener">
+                          <Smartphone className="mr-2 h-4 w-4" /> Available for Android
+                        </a>
                       </Button>
                     )}
                   </div>
