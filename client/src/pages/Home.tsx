@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4">
       <Card className="w-full max-w-2xl">
         <CardHeader>
           <CardTitle className="text-2xl font-bold flex items-center gap-2">
@@ -19,7 +19,7 @@ export default function Home() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <p className="text-gray-600">
+            <p className="text-slate-600">
               This application helps you track your progress through each phase of the ISI MSQE preparation journey. 
               The tracker includes four comprehensive study phases spanning from foundation building to final preparation.
             </p>

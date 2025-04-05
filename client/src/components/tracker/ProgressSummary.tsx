@@ -17,31 +17,31 @@ interface ProgressSummaryProps {
 }
 
 export default function ProgressSummary({ stats }: ProgressSummaryProps) {
-  // Background colors for the different phase cards
+  // Background colors for the different phase cards with black-white-purple-blue palette
   const phaseColors = {
     phase1: {
-      bg: 'bg-blue-50',
-      text: 'text-blue-800',
-      accent: 'text-blue-600',
-      circle: 'bg-blue-100'
+      bg: 'bg-slate-100',
+      text: 'text-slate-900',
+      accent: 'text-primary',
+      circle: 'bg-slate-200'
     },
     phase2: {
-      bg: 'bg-indigo-50',
-      text: 'text-indigo-800',
-      accent: 'text-indigo-600',
-      circle: 'bg-indigo-100'
+      bg: 'bg-slate-100',
+      text: 'text-slate-900',
+      accent: 'text-primary',
+      circle: 'bg-slate-200'
     },
     phase3: {
-      bg: 'bg-purple-50',
-      text: 'text-purple-800',
-      accent: 'text-purple-600',
-      circle: 'bg-purple-100'
+      bg: 'bg-slate-100',
+      text: 'text-slate-900',
+      accent: 'text-primary',
+      circle: 'bg-slate-200'
     },
     phase4: {
-      bg: 'bg-pink-50',
-      text: 'text-pink-800',
-      accent: 'text-pink-600',
-      circle: 'bg-pink-100'
+      bg: 'bg-slate-100',
+      text: 'text-slate-900',
+      accent: 'text-primary',
+      circle: 'bg-slate-200'
     }
   };
 

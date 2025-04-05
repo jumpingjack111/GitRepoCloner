@@ -21,31 +21,31 @@ export default function PhaseCard({
   progress,
   onToggleTask
 }: PhaseCardProps) {
-  // Define color schemes for each phase
+  // Define color schemes with black-white-purple-blue palette
   const colorSchemes = {
     phase1: {
-      bg: 'bg-blue-50',
-      border: 'border-blue-200',
-      badge: 'bg-blue-100 text-blue-800',
-      progress: 'bg-blue-600'
+      bg: 'bg-slate-50',
+      border: 'border-slate-200',
+      badge: 'bg-slate-100 text-slate-800',
+      progress: 'bg-primary'
     },
     phase2: {
-      bg: 'bg-indigo-50',
-      border: 'border-indigo-200',
-      badge: 'bg-indigo-100 text-indigo-800',
-      progress: 'bg-indigo-600'
+      bg: 'bg-slate-50',
+      border: 'border-slate-200',
+      badge: 'bg-slate-100 text-slate-800',
+      progress: 'bg-primary'
     },
     phase3: {
-      bg: 'bg-purple-50',
-      border: 'border-purple-200',
-      badge: 'bg-purple-100 text-purple-800',
-      progress: 'bg-purple-600'
+      bg: 'bg-slate-50',
+      border: 'border-slate-200',
+      badge: 'bg-slate-100 text-slate-800',
+      progress: 'bg-primary'
     },
     phase4: {
-      bg: 'bg-pink-50',
-      border: 'border-pink-200',
-      badge: 'bg-pink-100 text-pink-800',
-      progress: 'bg-pink-600'
+      bg: 'bg-slate-50',
+      border: 'border-slate-200',
+      badge: 'bg-slate-100 text-slate-800',
+      progress: 'bg-primary'
     }
   };
 
