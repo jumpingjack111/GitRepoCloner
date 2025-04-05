@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Sidebar from '@/components/layout/Sidebar';
 import BrightnessController from '@/components/theme/BrightnessController';
+import InstallAppBanner from '@/components/layout/InstallAppBanner';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 interface AppLayoutProps {
@@ -33,6 +34,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
           ISI MSQE Study Tracker - Data is saved locally in your browser
         </footer>
       </div>
+      
+      {/* App installation banner */}
+      <InstallAppBanner />
     </div>
   );
 }

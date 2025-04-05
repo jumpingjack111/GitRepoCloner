@@ -1,9 +1,12 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { CheckSquare, Clock, Timer, BarChart, BookOpen, ArrowRight } from "lucide-react";
+import { CheckSquare, Clock, Timer, BarChart, BookOpen, ArrowRight, Smartphone, Download, Wifi, WifiOff } from "lucide-react";
+import { useIsAndroid } from "@/hooks/use-standalone";
 
 export default function Home() {
+  const isAndroid = useIsAndroid();
+
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
       <Card className="w-full max-w-4xl">
@@ -71,6 +74,56 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
+            
+            {/* Android App Banner */}
+            <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
+              <CardHeader className="pb-2">
+                <div className="flex items-center gap-2">
+                  <div className="p-2 bg-primary/10 rounded-md">
+                    <Smartphone className="h-5 w-5 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Mobile App Available</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-col md:flex-row gap-4 items-center">
+                  <div className="flex-1">
+                    <h3 className="font-medium mb-2">Get the Android App</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Download our Android app for a better experience with these features:
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <WifiOff className="h-4 w-4 text-primary/70" />
+                        <span>Full offline functionality</span>
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Smartphone className="h-4 w-4 text-primary/70" />
+                        <span>Native mobile experience</span>
+                      </li>
+                      <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Clock className="h-4 w-4 text-primary/70" />
+                        <span>Background timers and notifications</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    {isAndroid ? (
+                      <Button className="w-full sm:w-auto" size="lg" asChild>
+                        <a href="/download-apk.html" target="_blank" rel="noopener">
+                          <Download className="mr-2 h-4 w-4" /> Download APK
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button className="w-full sm:w-auto" size="lg" variant="outline">
+                        <Smartphone className="mr-2 h-4 w-4" /> Available for Android
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
             
             <div className="border rounded-md p-4">
               <h3 className="font-medium mb-2">Study Plan Timeline</h3>
