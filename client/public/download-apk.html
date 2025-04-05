@@ -32,28 +32,56 @@
         </div>
         
         <div class="download-button-container">
-          <a href="isi-msqe-study-tracker.apk" class="download-button" download>
+          <div class="status-message">
+            <div class="status-icon">⚠️</div>
+            <p>The APK is currently in development and not available for download yet.</p>
+          </div>
+          
+          <div class="build-options">
+            <h3>Build the APK yourself:</h3>
+            <p>Follow these steps to build the APK from source:</p>
+            <ol class="build-steps">
+              <li>Clone the repository</li>
+              <li>Run <code>npm install</code></li>
+              <li>Run <code>npm run build</code></li>
+              <li>Run <code>npx cap add android</code></li>
+              <li>Run <code>npx cap sync android</code></li>
+              <li>Run <code>npx cap open android</code></li>
+              <li>Build the APK in Android Studio</li>
+            </ol>
+          </div>
+          
+          <a href="/" class="download-button">
             <svg xmlns="http://www.w3.org/2000/svg" class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
+              <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            Download APK
+            Return to Web App
           </a>
-          <p class="note">Click the button above to download the APK file.</p>
         </div>
       </div>
       
       <div class="installation-guide">
-        <h2>Installation Instructions</h2>
+        <h2>Future Installation Instructions</h2>
+        <p class="development-note">Once the APK is available, you'll be able to install it following these steps:</p>
         <ol>
-          <li>Download the APK file by clicking the button above</li>
+          <li>Download the APK file when it becomes available</li>
           <li>Open your device's file manager and locate the downloaded APK</li>
           <li>Tap on the APK file to begin installation</li>
           <li>If prompted about security settings, go to Settings → Security → Enable "Unknown Sources"</li>
           <li>Return to the APK and continue installation</li>
           <li>Once installed, open the app and start studying!</li>
         </ol>
+        
+        <div class="pwa-option">
+          <h3>Alternative: Install as PWA</h3>
+          <p>In the meantime, you can install the web app as a Progressive Web App (PWA) on your device:</p>
+          <ol>
+            <li>Open the website in Chrome on your Android device</li>
+            <li>Tap the menu button (three dots) in the top right</li>
+            <li>Select "Add to Home Screen"</li>
+            <li>Follow the prompts to install the PWA</li>
+          </ol>
+        </div>
       </div>
       
       <div class="features">
