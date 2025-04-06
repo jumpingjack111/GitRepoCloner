@@ -5,6 +5,7 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  base: '/GitRepoCloner/',  // Update the base path for GitHub Pages
   plugins: [
     react(),
     runtimeErrorOverlay(),
