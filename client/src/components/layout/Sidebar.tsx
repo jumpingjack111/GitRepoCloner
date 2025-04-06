@@ -81,12 +81,14 @@ export default function Sidebar({ className }: SidebarProps) {
       href: '/resources',
       icon: BookOpen,
     },
-    {
-      title: 'Android App',
-      href: '/download-android',
-      icon: Smartphone,
-    },
   ];
+  
+  // Add Android download link separately to ensure it's always included
+  const androidLink: NavLink = {
+    title: 'Android App',
+    href: '/download-android',
+    icon: Smartphone,
+  };
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
@@ -124,6 +126,7 @@ export default function Sidebar({ className }: SidebarProps) {
       
       <div className="px-3 py-2">
         <div className="space-y-1">
+          {/* Standard navigation links */}
           {links.map((link) => (
             <Link key={link.href} href={link.href}>
               <Button
@@ -136,12 +139,28 @@ export default function Sidebar({ className }: SidebarProps) {
               >
                 <link.icon className={cn("h-5 w-5", isCollapsed ? "" : "mr-2")} />
                 {!isCollapsed && <span>{link.title}</span>}
-                {!isCollapsed && link.href === '/download-android' && (
-                  <Download className="ml-1 h-3 w-3" />
-                )}
               </Button>
             </Link>
           ))}
+          
+          {/* Separator before Android download link */}
+          <div className="my-2 border-t border-border"></div>
+          
+          {/* Android Download Link - always visible and highlighted */}
+          <Link href={androidLink.href}>
+            <Button
+              variant={location === androidLink.href ? "secondary" : "default"}
+              className={cn(
+                "w-full justify-start bg-primary/10 hover:bg-primary/20",
+                isCollapsed ? "px-2" : "px-3"
+              )}
+              size={isCollapsed ? "icon" : "default"}
+            >
+              <androidLink.icon className={cn("h-5 w-5 text-primary", isCollapsed ? "" : "mr-2")} />
+              {!isCollapsed && <span>{androidLink.title}</span>}
+              {!isCollapsed && <Download className="ml-1 h-3 w-3" />}
+            </Button>
+          </Link>
         </div>
       </div>
     </>
